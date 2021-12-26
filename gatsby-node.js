@@ -15,7 +15,7 @@ exports.createPages = async({graphql,actions})=>{
     `)
     // console.log(util.inspect(data, false, null, true))
     data.allMarkdownRemark.nodes.forEach(node=>{
-          console.log(util.inspect(node, false, null, true))
+        //   console.log(util.inspect(node, false, null, true))
         actions.createPage({
             path: '/projects/' + node.frontmatter.slug,
             component : path.resolve('./src/templates/project-templates.js'),
